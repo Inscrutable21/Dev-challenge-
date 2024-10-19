@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, '../client/build')));
 // API routes
 app.use('/api', apiRoutes);
 
-// Catch-all handler for any request that doesn't match the ones above
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
